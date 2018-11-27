@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+    <form action="/register/" method="post">
+        {% csrf_token %}
+        <table align="center" border="2">
+            <tr><td align="center">
+                <h1>Registration</h1></td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form.as_p }}
+                </td>
+            </tr>
+             <tr>
+                 <td align="center">
+                     <input type="submit" value="register">
+                 </td>
+             </tr>
+            <tr>
+                <td align="center">
+                    {{ mes }}
+                </td>
+            </tr>
+            <tr>
+                <th><a href="/list/">List</a></th>
+            </tr>
+        </table>
+</form>
+
+
+</body>
+</html>
